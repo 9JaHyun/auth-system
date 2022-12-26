@@ -1,0 +1,24 @@
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/auth-server
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+
+jwt:
+  secret-key: A134qwelkjfcmn341123
+  access-expired-time: 60000
+  refresh-expired-time: 3600000
