@@ -1,0 +1,15 @@
+# 회원가입 테스트
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+  "username":"newUser",
+  "password":"password",
+  "nickname":"nickname",
+  "email":"test@gmail.com"
+}
+
+###
+
+# 이메일 인증 테스트
+GET http://localhost:8000/email?username=newUser&email=test@gmail.com&authCode=1ee5b766-388b-415b-8b36-ff2dafa70af5

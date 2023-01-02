@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: test, key
+
+redis-maxAge:
+  auth-code: 60000

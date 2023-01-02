@@ -1,0 +1,6 @@
+# 어드민 테스트
+# Admin이라는 정보가 없으면 조회 실패
+GET http://localhost:8000/users
+
+###
+# Admin이라는 정보가 있어야 조회 성공
