@@ -2,6 +2,7 @@ package com.userservice.adapter.in.api;
 
 import com.userservice.adapter.in.api.dto.SendAuthMailRequest;
 import com.userservice.application.port.in.EmailUseCase;
+import com.userservice.filter.RateLimit;
 import javax.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ public class EmailController {
         this.emailUseCase = emailUseCase;
     }
 
+    @RateLimit
     @PostMapping("/authEmail")
     public void sendAuthMail(@Valid SendAuthMailRequest request) {
         emailUseCase.sendAuthEmail(request.username(), request.email());
