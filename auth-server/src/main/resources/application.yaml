@@ -1,0 +1,9 @@
+server:
+  port: 6666
+
+spring:
+  profiles:
+    active: test
+
+redis-maxAge:
+    recent-login: 604800000

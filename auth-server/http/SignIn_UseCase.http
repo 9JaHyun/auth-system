@@ -1,0 +1,8 @@
+# 정상적인 로그인
+GET http://localhost:6666/signIn?username=newUser&password=password1
+
+###
+# 로그인 정보 불일치
+GET http://localhost:6666/signIn?username=newUser&password=password2
+
+
